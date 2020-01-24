@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,75 +5,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="icon" type="image/png" href="/favicon.ico?v=1.0.1" />
-    <meta name="google-site-verification" content="Z6HC-hN3X2QZ3R7IWm6tblZar4bae-VQwLANyhICYOc" />
-    <meta name="google-site-verification" content="1Lbth8wmGgjTQ03I8a0ab4Q6wKw5LLIsBqhxmwltIkI" />
-
-    <title>{{ .Title }}Anonutopia - A Smart Contract Country</title>
-    <meta name="description" content="{{ .Title }}Anonutopia is a smart contract country (crypto-country or decentralized autonomous country) with its own currencies, universal basic income and other projects."/>
-
-    <!-- Google font -->
+    <link rel="icon" type="image/png" href="./static/favicon.ico?v=1.0.1" />
+    <title>Uključi se i ti | AnonTaxi - Besplatna taxi aplikacija otvorenog koda</title>
+    <meta name="description" content="Uključi se i ti | AnonTaxi je besplatna taxi aplikacija otvorenog koda kojom upravlja zajednica koja ju i koristi."/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
-
-    <!-- Owl Carousel -->
-    <link type="text/css" rel="stylesheet" href="/css/owl.carousel.css" />
-    <link type="text/css" rel="stylesheet" href="/css/owl.theme.default.css" />
-
-    <!-- Magnific Popup -->
-    <link type="text/css" rel="stylesheet" href="/css/magnific-popup.css" />
-
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="/css/style.css?v=1.0.5" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <meta property="og:url"                content="https://www.anonutopia.com{{ .URI }}" />
+    <link type="text/css" rel="stylesheet" href="./static/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./static/css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="./static/css/owl.theme.default.css" />
+    <link type="text/css" rel="stylesheet" href="./static/css/magnific-popup.css" />
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./static/css/style.css?v=1.0.6" />
+    <meta property="og:url"                content="https://www.anontaxi.com/" />
     <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="{{ .Title }}Anonutopia - A Smart Contract Country" />
-    <meta property="og:description"        content="{{ .Title }}Apply for citizenship with Anonutopia and receive free Anote!" />
-    <meta property="og:image"              content="https://www.anonutopia.com/img/fb.png?v=1.0.0" />
-
-    <script type="text/javascript">
-
-        contractAddress = '{{ .ContractAddress }}';
-        contractAbi = {{ .ContractAbi }};
-        networkVersion = {{ .NetworkVersion }};
-
-    </script>
+    <meta property="og:title"              content="Uključi se i ti | AnonTaxi - Besplatna Taxi Aplikacija" />
+    <meta property="og:description"        content="Uključi se i ti | AnonTaxi je besplatna taxi aplikacija otvorenog koda kojom upravlja zajednica koja ju i koristi." />
+    <meta property="og:image"              content="https://www.anontaxi.com/static/img/fb.png?v=1.0.0" />
 </head>
 
 <body>
 
     <!-- Header -->
-    <header{{ if (eq $.URI "/") }} id="home"{{ end }}>
+    <header>
         <!-- Background Image -->
-        <div class="bg-img" style="background-image: url('/img/background13.jpeg');">
+        <div class="bg-img" style="background-image: url('./static/img/background13.jpeg');">
             <div class="overlay"></div>
         </div>
         <!-- /Background Image -->
 
         <!-- Nav -->
-        <nav id="nav" class="navbar{{ if eq $.URI "/" }} nav-transparent{{ end }}">
+        <nav id="nav" class="navbar">
             <div class="container">
 
                 <div class="navbar-header">
                     <!-- Logo -->
                     <div class="navbar-brand">
                         <a href="/">
-                            <img class="logo" src="/img/logo.png" alt="logo">
-                            <img class="logo-alt" src="/img/logo-alt.png" alt="logo">
+                            <img class="logo" src="./static/img/logo.png" alt="logo">
+                            <img class="logo-alt" src="./static/img/logo-alt.png" alt="logo">
                         </a>
                     </div>
                     <!-- /Logo -->
@@ -86,27 +53,11 @@
                     <!-- /Collapse nav button -->
                 </div>
 
-                <!--  Main navigation  -->
                 <ul class="main-nav nav navbar-nav navbar-right" id="main-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="https://wallet.anonutopia.com">Wallet</a></li>
-                    <li><a href="/anote/">Anote</a></li>
-                    <li class="has-dropdown open-drop"><a href="/about/">About</a>
-						<ul class="dropdown">
-                            <li><a href="/crowdfunding/">Crowdfunding</a></li>
-                            <li><a href="/cryptocountries/">Crypto Countries</a></li>
-                            <li><a href="/faq/">Frequent Questions</a></li>
-                            <li><a href="/contact/">Contact</a></li>
-						</ul>
-					</li>
-                    <li class="has-dropdown open-drop"><a href="/docs/">Docs</a>
-						<ul class="dropdown">
-                            <li><a href="/tags/">Tags in Anonutopia</a></li>
-                            <li><a href="/staking/">Staking with Our Node</a></li>
-						</ul>
-					</li>
+                    <li><a href="/">Naslovnica</a></li>
+                    <li><a href="/faq">Česta pitanja</a></li>
+                    <li><a href="/ukljuci-se">Uključi se!</a></li>
                 </ul>
-                <!-- /Main navigation -->
 
             </div>
         </nav>
@@ -115,10 +66,10 @@
         <!-- header wrapper -->
         <div class="header-wrapper sm-padding bg-dark">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
+                <h2>Uključi se i ti!</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active">FAQ</li>
+                    <li class="breadcrumb-item"><a href="/">Naslovnica</a></li>
+                    <li class="breadcrumb-item active">Uključi se</li>
                 </ul>
             </div>
         </div>
@@ -139,25 +90,34 @@
                 <main id="main" class="col-md-9">
 
                     <div class="faqRow">
-                        <h4>What is Anonutopia?</h4>
-                        <p>Anonutopia is a smart contract based decentralized Internet country (or crypto-country or 
-                        decentralized autonomous country) with its own cryptocurrencies, universal basic income, ATM 
-                        network, taxi app, housing app and other similar Open Source applications. In a reality, it's 
-                        a suit of Open Source tools, cryptocurrencies and applications for managing a large group of 
-                        people with common interests in a democratic manner.</p>
+                        <h4><i class="fa fa-telegram"></i> Telegram kao glavni alat</h4>
+                        <p style="margin-bottom: 20px;">Za sve dogovore o projektu, organizaciju, odlučivanje i glasanje koristimo 
+                            <a href="https://telegram.org/apps" target="_blank"><strong>Telegram</strong></a> aplikaciju 
+                            koja se pokazala i dokazala kao najbolja za takvu vrstu namjene. Za korisničku podršku, 
+                            rasprave, prijedloge i ostalu neformalnu komunikaciju, tu je 
+                            <a href="https://t.me/AnonTaxi" target="_blank">AnonTaxi</a> javna Telegram grupa.
+                        </p>
+                        <p>Za one koji posjeduju token-dionicu imamo privatnu grupu <strong>AnonTaxi Board of Directors</strong> u koju 
+                            korisnik bude ubačen po kupnji tokena-dionice.
+                        </p>
                     </div>
 
                     <div class="faqRow">
-                        <h4>Is your software Open Source?</h4>
-                        <p>Yes, we're proud to say that everything we do is <a href="https://github.com/anonutopia" target="_blank">
-                        free and Open Source</a>.</p>
+                        <h4><i class="fa fa-car"></i> Ukoliko ste vozač</h4>
+                        <p>Todo.
+                        </p>
                     </div>
 
                     <div class="faqRow">
-                        <h4>What technologies are you using for your tokens and smart contracts?</h4>
-                        <p>We use <a href="https://wavesplatform.com/" target="_blank">Waves</a> for our currencies and 
-                        tokens and <a href="https://ethereum.org/" target="_blank">Ethereum</a> for our smart contracts. 
-                        We're soon planning to move smart contracts to Waves too.</p>
+                        <h4><i class="fa fa-credit-card"></i> Ukoliko ste korisnik</h4>
+                        <p>Todo.
+                        </p>
+                    </div>
+
+                    <div class="faqRow">
+                        <h4><i class="fa fa-bitcoin"></i> Ukoliko ste investitor</h4>
+                        <p>Todo.
+                        </p>
                     </div>
 
                 </main>
@@ -171,23 +131,9 @@
                     <div class="widget">
                         <h3 class="title">Menu</h3>
                         <div class="widget-category">
-                            <a href="/">Home</a>
-                            <a href="https://wallet.anonutopia.com">Wallet</a>
-                            <a href="/anote/">Anote</a>
-                            <a href="/about/">About</a>
-                            <a href="/crowdfunding/">&dash;&dash;&nbsp;&nbsp;Crowdfunding</a>
-                            <a href="/cryptocountries/">&dash;&dash;&nbsp;&nbsp;Crypto Countries</a>
-                            <a href="/faq/">&dash;&dash;&nbsp;&nbsp;FAQ</a>
-                            <a href="/contact/">&dash;&dash;&nbsp;&nbsp;Contact</a>
-                            <a href="/docs/">Docs</a>
-                            <a href="/tags/">&dash;&dash;&nbsp;&nbsp;Tags in Anonutopia</a>
-                            <a href="/staking/">&dash;&dash;&nbsp;&nbsp;Staking with Our Node</a>
-                        </div><br><br>
-                        <div class="widget-category">
-                            <a href="https://wallet.anonutopia.com/sign-up/" style="color: #E42D20;"><strong>Apply for Citizenship</strong></a>
-                            <a href="/airdrop/">Airdrop</a>
-                            <a href="/profit/">Making Profit</a>
-                            <a href="/projects/">Projects</a>
+                            <a href="/">Naslovnica</a>
+                            <a href="/faq">Česta pitanja</a>
+                            <a href="/ukljuci-se" style="color: #E42D20;"><strong>Uključi se odmah!</strong></a>
                         </div>
                     </div>
                     <!-- /Category -->
@@ -217,7 +163,7 @@
 
                     <!-- footer logo -->
                     <div class="footer-logo">
-                        <a href="/"><img src="/img/logo-alt.png" alt="logo"></a>
+                        <a href="/"><img src="./static/img/logo-alt.png" alt="logo"></a>
                     </div>
                     <!-- /footer logo -->
 
@@ -229,11 +175,9 @@
 					</ul>
 					<!-- /footer follow -->
 
-                    <!-- footer copyright -->
                     <div class="footer-copyright">
-                        <p>Copyright &copy; 2018 <a href="/">Anonutopia</a>.</p>
+                        <p>Copyright &copy; 2020 <a href="/">AnonTaxi</a>.</p>
                     </div>
-                    <!-- /footer copyright -->
 
                 </div>
 
@@ -261,20 +205,15 @@
     </div>
     <!-- /Preloader -->
 
-    <!-- jQuery Plugins -->
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.magnific-popup.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="/js/datamaps.world.min.js"></script>
-    <script src="/js/waves-api.min.js"></script>
-    <!-- Cookies lib -->
-    <script src="/js/js.cookie.min.js"></script>
-    <script type="text/javascript" src="/js/main.js?v=1.0.19"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="./static/js/datamaps.world.min.js"></script>
+    <script src="./static/js/js.cookie.min.js"></script>
+    <script type="text/javascript" src="./static/js/main.js?v=1.0.18"></script>    
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113507826-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
