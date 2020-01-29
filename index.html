@@ -314,18 +314,20 @@
     </script>
 
     <script>
-         WavesKeeper.initialPromise
-        .then((keeperApi) => {
-            /*...init app*/
-            keeperApi.publicState()
-            .then(state => {
-                console.log(state); //displaying the result in the console
-                /*...processing data */
-            }).catch(error => {
-                console.error(error); // displaying the result in the console
-                /*...processing errors */
+        if WavesKeeper !== undefined {
+            WavesKeeper.initialPromise
+            .then((keeperApi) => {
+                /*...init app*/
+                keeperApi.publicState()
+                .then(state => {
+                    console.log(state); //displaying the result in the console
+                    /*...processing data */
+                }).catch(error => {
+                    console.error(error); // displaying the result in the console
+                    /*...processing errors */
+                })
             })
-        })
+        }
     </script>
 
 </body>
