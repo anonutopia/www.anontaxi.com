@@ -317,12 +317,15 @@
          WavesKeeper.initialPromise
         .then((keeperApi) => {
             /*...init app*/
-            keeperApi.publicState().then( state => startApp(state));
+            keeperApi.publicState()
+            .then(state => {
+                console.log(state); //displaying the result in the console
+                /*...processing data */
+            }).catch(error => {
+                console.error(error); // displaying the result in the console
+                /*...processing errors */
+            })
         })
-
-        function startApp(state) {
-            console.log(state);
-        }
     </script>
 
 </body>
