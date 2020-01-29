@@ -313,6 +313,18 @@
     gtag('config', 'UA-113507826-4');
     </script>
 
+    <script>
+         WavesKeeper.initialPromise
+        .then((keeperApi) => {
+            /*...init app*/
+            keeperApi.publicState().then( state => startApp(state));
+        })
+
+        function startApp(state) {
+            console.log(state);
+        }
+    </script>
+
 </body>
 
 </html>
