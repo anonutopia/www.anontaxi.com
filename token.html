@@ -57,6 +57,7 @@
                 <ul class="main-nav nav navbar-nav navbar-right" id="main-nav">
                     <li><a href="/">Naslovnica</a></li>
                     <li><a href="/faq">Česta pitanja</a></li>
+                    <li><a href="/token">Token</a></li>
                     <li><a href="/ukljuci-se">Uključi se!</a></li>
                 </ul>
 
@@ -90,24 +91,65 @@
                 <!-- Main -->
                 <main id="main" class="col-md-9">
 
-                    <p>Todo</p>
+                    <div class="faqRow">
+                        <h4><i class="fa fa-question-circle"></i> Što je ATST (AnonTaxi Stock Token)?</h4>
+                        <p style="margin-bottom: 20px;">ATST je standardni <a href="https://wavesplatform.com/">Waves</a> token koji u okvirima AnonTaxi 
+                            aplikacije ima višestruku ulogu. Budući da se radi o projektu otvorenog koda (Open Source), 
+                            projektom će upravljati i o njemu odlučivati vlasnici ATST tokena na način kao da igraju 
+                            računalnu igricu. Osim toga, tokenom će se moći plaćati i vožnje u samoj aplikaciji, a bit će 
+                            povezan i za najam vozila unutar aplikacije i svojim će vlasnicima donositi zaradu u obliku drugih 
+                            kriptovaluta.</p>
+                            
+                            <p>Određena količina tokena vlasnika automatski dodaje u Telegram grupu "AnonTaxi Board 
+                            of Directors" iz koje se direktno-demokratski upravlja čitavim projektom u obliku neformalne 
+                            Internet zajednice.
+                        </p>
+                    </div>
 
-                    <script>
-                        if (typeof(WavesKeeper) != "undefined") {
-                            WavesKeeper.initialPromise
-                            .then((keeperApi) => {
-                                /*...init app*/
-                                keeperApi.publicState()
-                                .then(state => {
-                                    console.log(state); //displaying the result in the console
-                                    /*...processing data */
-                                }).catch(error => {
-                                    console.error(error); // displaying the result in the console
-                                    /*...processing errors */
-                                })
-                            })
-                        }
-                    </script>
+                    <div class="faqRow">
+                        <h4><i class="fa fa-table"></i> Opći podaci o tokenu</h4>
+                        <p>
+                            <strong>Naziv tokena</strong><br>
+                            ATST - AnonTaxi Stock Token<br>
+                            <strong>ID tokena</strong><br>
+                            7DYtmeU9znAXeq4jNLFWLd9RiWEyEGmqWFSMAqk8Czdu<br>
+                            <strong>Maksimalni broj izdanih apoena</strong><br>
+                            100 milijuna<br>
+                            <strong>Broj decimala</strong><br>
+                            8<br>
+                            <strong>Raspodjela tokena</strong><br>
+                            <a href="http://dev.pywaves.org/assets/7DYtmeU9znAXeq4jNLFWLd9RiWEyEGmqWFSMAqk8Czdu" target="_blank">Ovdje</a>
+                        </p>
+                    </div>
+
+                    <div class="faqRow">
+                        <h4><i class="fa fa-arrow-down"></i> Kako kupiti token?</h4>
+                        <p>
+                            <i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;&nbsp;Instalirajte Waves novčanik, možete ga skinuti <a href="https://waves.exchange/" target="_blank">ovdje</a>.<br>
+                            <i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;&nbsp;U <a href="https://bitcoin-mjenjacnica.hr/" target="_blank">Bitcoin mjenjačnici</a> ili bilo gdje drugdje kupite Waves 
+                            tokene tako da im predate svoju Waves adresu koju možete pronaću u novčaniku.<br>
+                            <i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;&nbsp;Nakon što u novčaniku imate Waves tokene, pošaljite ih na adresu AnonTaxi-a: 3PLJQASFXtiohqbirYwSswjjbYGLfaGDEQy<br>
+                            <i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;&nbsp;To je to, u vaš Waves novčanik će sjesti ATST tokeni prema trenutnoj cijeni koju uvijek možete provjeriti u 
+                            Telegram grupi <a href="https://t.me/AnonTaxi" target="_blank"><strong>AnonTaxi</strong></a>.
+                        </p>
+                    </div>
+
+                    <div class="faqRow">
+                        <h4><i class="fa fa-arrow-up"></i> Kako prodati token?</h4>
+                        <p>
+                            Ukoliko u smart contractu ima dovoljno Wavesa, token uvijek možete prodati natrag contractu na način da ga jednostavno pošaljete natrag na 
+                            AnonTaxi Waves adresu. Odmah nakon toga u vaš će novčanik sjesti Waves tokeni koje putem Bitcoin mjenjačnice ili sličnog servisa možete 
+                            pretvoriti natrag u kune. Ukoliko nema dovoljno Waves tokena u contractu, vaš ATST token možete izlistati na DEX-u, decentraliziranoj 
+                            mjenjačnici Waves tokena ugrađenoj u novčanik.
+                        </p>
+                    </div>
+                    
+                    <div class="faqRow">
+                        <h4><i class="fa fa-line-chart"></i> Podaci o tokenu u živo</h4>
+                        <p>
+                            Uskoro. Do tada posjetite našu Telegram grupu, <a href="https://t.me/AnonTaxi" target="_blank"><strong>AnonTaxi</strong></a>
+                        </p>
+                    </div>
 
                 </main>
                 <!-- /Main -->
@@ -122,6 +164,7 @@
                         <div class="widget-category">
                             <a href="/">Naslovnica</a>
                             <a href="/faq">Česta pitanja</a>
+                            <a href="/token">Token</a>
                             <a href="/ukljuci-se" style="color: #E42D20;"><strong>Uključi se odmah!</strong></a>
                         </div>
                     </div>
